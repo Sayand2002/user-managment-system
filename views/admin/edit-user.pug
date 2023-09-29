@@ -1,0 +1,42 @@
+
+include ../header 
+    div.window-div
+        form(method="post")
+            div.container.mt-5.main-div.px-4
+                div.mb-4.text-center
+                    h1.text-white.mt-3.heading_style EDIT USER
+                div.mb-3.username
+                    div.username-fname
+                        label(for="exampleInputFirstname").px-2.form-label.text-white Firstname
+                        input(type="text" name="firstname" placeholder="firstname" value=`${user.firstname}`).inputStyle.form-control#exampleInputFirstname
+                        div#emailHelp.text-white.px-2
+                    div.username-lname
+                        label(for="exampleInputLastname").px-2.form-label.text-white Lastname
+                        input(type="text" name="lastname" placeholder="lastname" value=`${user.lastname}`).inputStyle.form-control#exampleInputLastname
+                        div#emailHelp.text-white.px-2
+
+                div.mb-3
+                    label(for="exampleInputEmail1").px-2.form-label.text-white Email address
+                    input(type="email" name="email" placeholder="email" value=`${user.email}`).inputStyle.form-control#exampleInputEmail1
+                    div#emailHelp.text-white.px-2 
+                
+                div.mb-3
+                    label(for="exampleInputPhone").px-2.form-label.text-white Phone No
+                    input(type="text" name="phone_no" placeholder="Phone number" value=`${user.phone_no}`).inputStyle.form-control#exampleInputPhone
+                    div#emailHelp.text-white.px-2 
+
+                div.mb-3
+                    label(for="exampleInputVerify").px-2.form-label.text-white Verified
+                    input(type="radio" name="verify" value="1"  checked=user.is_verified === 1)#exampleInputVerify
+                    label(for="exampleInputNotVerify").px-2.form-label.text-white Not Verified
+                    input(type="radio" name="verify" value="0" checked=user.is_verified === 0)#exampleInputNotVerify
+
+                    input(type="hidden", name="id" value=`${user._id}`)
+
+                div.container.text-center
+                    button(type="submit").btn.btn-primary.mb-3 UPDATE
+                //- div.mb-3.text-white
+                //-     p.text-success #{successMessage}
+    //- a(href="/admin/") 
+
+

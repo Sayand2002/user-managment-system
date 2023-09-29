@@ -1,0 +1,51 @@
+include ../header
+
+nav.navbar.navbar-expand-lg.navbar-home
+    div.container-fluid
+        a.navbar-brand.text-white(href='#') DASHBOARD
+        button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+        div#navbarNav.collapse.navbar-collapse
+            ul.navbar-nav.mb-2.dashboardNav
+                li.nav-item.text-center.ml-auto
+                    form(action="/admin/search-user" method="POST")
+                        input(type='text', placeholder='Search user', class='inputStyle rounded-2 dashboardNavSearch ps-3' name="searchData")
+                        button.btn.btn-secondary.text-center.mx-1(type="submit") SEARCH
+                li.nav-item.text-center
+                    a.btn.btn-primary.text-center(href='/admin/home', class='mx-3 mt-1') HOME
+
+div.container.mt-5
+    table.table.userViewTable
+        thead
+            tr.text-white
+                th(scope="col") Username
+                th(scope="col") Email
+                th(scope="col") Phone no
+                th(scope="col") Image
+                th(scope="col") Verified
+                th(scope="col") Edit    
+                th(scope="col") Delete  
+        tbody.text-white
+            - if (userData.length > 0)
+                each user in userData
+                    tr
+                        td.pt-5 #{user.firstname+" "+user.lastname}
+                        td.pt-5 #{user.email}
+                        td.pt-5 #{user.phone_no}
+                        td
+                            img(src=`/public/userImages/${user.image}`, alt='User Image', width='130px', height='150px').bg-white.dashboardImage
+                        td
+                            -if(user.is_verified == 0)
+                                p.mt-5 Not verified
+                            -else
+                                p.mt-5 Verified
+                        td 
+                            a.text-decoration-none.btn.btn-success.mt-5(href=`/admin/edit-user?id=${user._id}`).text-white Edit 
+                        td 
+                            a.text-decoration-none.btn.btn-danger.mt-5(href=`/admin/delete-user?id=${user._id}`).text-white Delete 
+                         
+            - else
+                tr
+                    td(colspan="6") No users found.
+        
+script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js")

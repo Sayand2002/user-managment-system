@@ -1,0 +1,13 @@
+include header 
+    div.home-bg
+        nav.navbar.navbar-home
+            div.container-fluid
+                h3.navbar-brand.text-white Home
+                form(action='/logout' method='GET')
+                    button.btn.btn-danger.mt-2(type="submit") LOGOUT
+        div.container
+            div.home-div
+                a(href=`/public/userImages/${image}` target="_blank") 
+                    img(src=`/public/userImages/${image}`, alt='Uploaded Image').h-30.w-25.rounded-circle
+                h1.text-white.w-75.mt-5 Welcome, #{message}
+

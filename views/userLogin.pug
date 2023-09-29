@@ -1,0 +1,23 @@
+include header 
+    div.container.mt-5.login-parent
+        form(action='/login' method="post" onsubmit="return validateUserLogin()")
+            div.container.login-div.pt-3
+                h1.text-white.login-heading LOGIN
+                div.mb-3
+                    p.text-danger.text-center #{message} 
+                div.mb-3.my-3
+                    label(for="exampleInputEmail1").form-label.text-white Email
+                    input(type="email" name="email" novalidate).form-control#exampleInputEmail
+                    div#emailHelp.form-text We'll never share your email with anyone else.
+        
+                div.mb-3
+                    label(for=exampleInputPassword1).form-label.text-white Password
+                    input(type="password" name="password").form-control#exampleInputPassword
+                    div#passwordHelp.form-text
+                
+                div.mb-3.btn-div
+                    button(type="submit").btn.btn-primary Submit
+                    a(href="/register").px-3.pt-2.user-signup-link SIGNUP  
+    script(src="/script/script.js")
+       
+                            

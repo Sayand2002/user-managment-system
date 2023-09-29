@@ -1,0 +1,38 @@
+include ../header
+
+
+    form(action='' method="post")
+            div.container.pt-3.w-50.mt-5
+                h4.text-success.text-center#success-heading Email verified successfully
+                h4.text-danger.text-center#success-heading  #{message} 
+
+                h1.text-white.text-center UPDATE PASSWORD
+                div.mb-3
+                    p.text-danger.text-center #{message} 
+                div.mb-3.my-3
+                    label(for="exampleInputEmail1").form-label.text-white Enter password
+                    input(type="text" name="currentPassword" novalidate).form-control.w-100#exampleInputEmail
+                    div#emailHelp.form-text.text-white We'll never share your email with anyone else.
+        
+                div.mb-3
+                    label(for=exampleInputPassword1).form-label.text-white Enter new password
+                    input(type="text" name="newPassword").form-control.w-100#exampleInputPassword
+                
+                div.mb-3
+                    label(for=exampleInputPassword1).form-label.text-white Re-enter new password
+                    input(type="text" name="reEnterPassword").form-control.w-100#exampleInputPassword
+
+
+                div.mb-3.text-center.container
+                    input(type="hidden", name="id" value=`${id}`)
+
+                    button(type="submit").btn.btn-primary.w-50.m-2 UPDATE
+                    p.text-center.text-white or
+                    a(href="/").px-3.pt-2 PROCEED WITHOUT UPDATING
+
+
+    script.
+        setTimeout(function() {
+            const heading = document.getElementById('success-heading');
+            heading.textContent = '';
+        }, 2000);
