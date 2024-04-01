@@ -2,34 +2,34 @@
 include ../header 
     div.window-div
         form(method="post"  enctype="multipart/form-data")
-            div.container.mt-5.main-div.px-4
+            div.container.mt-5.main-div.px-4.w-50
                 div.mb-4.text-center
-                    h1.text-white.mt-3.heading_style ADD NEW USER
-                div.mb-3.text-white.text-center 
+                    h1.mt-3.heading_style ADD NEW USER
+                div.mb-3.text-center 
                     p.text-success #{successMessage}
                 div.mb-3.username
                     div.username-fname
-                        label(for="exampleInputEmail1").px-2.form-label.text-white Firstname
+                        label(for="exampleInputEmail1").px-2.form-label Firstname
                         input(type="text" aria-describedby="emailHelp" name="firstname").inputStyle.form-control#exampleInputEmail1
-                        div#emailHelp.text-white.px-2 
+                        div#emailHelp.px-2 
                     div.username-lname
-                        label(for="exampleInputEmail1").px-2.form-label.text-white Lastname
+                        label(for="exampleInputEmail1").px-2.form-label Lastname
                         input(type="text" aria-describedby="emailHelp" name="lastname").inputStyle.form-control#exampleInputEmail1 
-                        div#emailHelp.text-white.px-2 
+                        div#emailHelp.px-2 
 
                 div.mb-3
-                    label(for="exampleInputEmail1").px-2.form-label.text-white Email address
+                    label(for="exampleInputEmail1").px-2.form-label Email address
                     input(type="email" aria-describedby="emailHelp" name="email").inputStyle.form-control#exampleInputEmail1 
-                    div#emailHelp.text-white.px-2
+                    div#emailHelp.px-2
 
                 div.mb-3
-                    label(for="exampleInputEmail1").px-2.form-label.text-white Phone No
+                    label(for="exampleInputEmail1").px-2.form-label Phone No
                     input(type="text" aria-describedby="emailHelp" name="phone_no").inputStyle.form-control#exampleInputEmail1 
-                    div#emailHelp.text-white.px-2 
+                    div#emailHelp.px-2 
                 div.mb-3
-                    label(for="exampleInputPassword1" ).px-2.form-label.text-white Profile
+                    label(for="exampleInputPassword1" ).px-2.form-label Profile
                     input(type="file" name="image").form-control.inputStyle.exampleInputPassword1
-                    div#emailHelp.text-white.px-2
+                    div#emailHelp.px-2
 
                 
                 button(type="submit").btn.btn-success.mt-3.mb-4 ADD USER

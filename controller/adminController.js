@@ -9,7 +9,7 @@ const randomString = require("randomstring");
 
 
 // //importing bcrypt for encryption of password
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 const userDetails = require("../models/userModel");
 

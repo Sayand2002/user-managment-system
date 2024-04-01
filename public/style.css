@@ -1,19 +1,16 @@
 
 body{
-    background-image: url(assets/bg.avif);
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-size:cover;
+    background-color: #f4f4f4;
 }
 .main-div{
     border: 2px;
     background-color: rgba(255, 255, 255, 0.169);
-    border-style: solid;
-    border-color: hsla(193, 98%, 35%, 0.4);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 50%;
-    box-shadow: 5px 8px 10px #1ba0d866,
-    -5px -5px 10px #1ba0d866;
-    
+    border-radius: 5px;
 }
 
 @media (max-width:537px) {
@@ -33,18 +30,23 @@ body{
 
 /*login*/
 .login-parent{
-    padding-top: 10%;
+   padding-top: 50px;
 }
 .login-div{
-    padding-top: 2%;
-    border: 2px solid #0289af66;
-    width: 40%;
-    height: 50%;
-    box-shadow: 5px 8px 10px #1ba0d866,
-    -5px -5px 10px #1ba0d866;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 50px;
+    border-radius: 15px;
+    background-color: #f4f4f4;
+    color: black;
+    box-shadow: rgba(139, 139, 139, 0.12) 0px 2px 4px 0px, rgba(153, 153, 153, 0.32) 0px 2px 16px 0px;
 }
 .login-heading{
     text-align: center;
+    padding-top: 50px;
 }
 @media (max-width:720px) {
     .login-div{
@@ -54,8 +56,8 @@ body{
 
 .user-signup-link{
     text-decoration: none;
-    margin-bottom:5px ;
     font-size: large;
+    margin-top: 20px;
 }
 
 
@@ -64,20 +66,35 @@ body{
     justify-content: center;
     margin-top: 6%;
 }
+.container{
+    overflow: hidden;
+}
 .home-div{
-    height: 100%;
-    width: 100%;
-    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    width: 100vw;
+    overflow: hidden;
+    color: black;
 }
 
 .login-home-viewUser{
     font-size: 80%;
 }
+.login-home-viewUser-parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .navbar-home{
-    background-color: rgba(32, 68, 131, 0.598);
-    box-shadow: 5px 8px 10px #1ba0d866,
-    -5px -5px 10px #1ba0d866;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 .username{
     display: flex;
@@ -92,11 +109,8 @@ body{
 
 .userViewTable{
     padding-top: 2%;
-    border: 2px;
-    border-style: solid;
-    border-color: #0289af66;
-    box-shadow: 5px 8px 10px #1ba0d866,
-    -5px -5px 10px #1ba0d866;
+    border-color: #00000066;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .dashboardImage{
     border: 2px;
@@ -107,7 +121,8 @@ body{
     color: crimson;
 }
 .dashboardNavSearch{
-    height:75%
+    background-color: #dad8d8;
+    color: black;
 }
 
 

@@ -2,16 +2,16 @@ include ../header
     div.container-fluid.mt-5.login-parent
         form(action='/admin' method="post" onsubmit="return validateUserLogin()")
             div.container.login-div.pt-3
-                h2#heading.text-white.text-center ADMIN LOGIN
+                h2#heading.text-center.pt-5 ADMIN LOGIN
                 div.mb-3
                     p.text-danger.text-center #{message} 
                 div.mb-3.my-3
-                    label(for="exampleLoginInputEmail1").form-label.text-white Email
+                    label(for="exampleLoginInputEmail1").form-label Email
                     input(type="email" name="email").form-control#exampleInputEmail
                     div#emailHelp.form-text
         
                 div.mb-3
-                    label(for=exampleInputPassword1).form-label.text-white Password
+                    label(for=exampleInputPassword1).form-label Password
                     input(type="password" name="password").form-control#exampleInputPassword
                     div#passwordHelp.form-text.text-danger
                 

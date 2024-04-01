@@ -2,7 +2,7 @@
 const userDetails = require("../models/userModel");
 
 //importing bcrypt for encryption of password
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 // const userRoute = require("../routes/userRoutes");
 
 const securePassword = async (password) =>{
@@ -34,7 +34,7 @@ const sendVerifyMail = async (name, email, user_id )=> {
             from:"sayand2k2@gmail.com",
             to:email,
             subject:"Verification Mail",
-            html: '<p>Hello, ' + name + ', please click here to <a href="http://localhost:2000/verifyEmail?id=' + user_id + '"> verify </a> your mail</p>'
+            html: '<p>Hello, ' + name + ', please click here to <a href="http://localhost:2021/verifyEmail?id=' + user_id + '"> verify </a> your mail</p>'
         }
 
         transporter.sendMail(mailoptions, (error, info) => {
@@ -167,6 +167,7 @@ const userLogout = async (req, res) => {
 const verifyMail = async (req, res) => {
     try {
         const userId = req.query.id;
+        console.log(userId,"................");
         const updated = await userDetails.updateOne(
             { _id: userId },
             { $set: { is_verified: 1 } }

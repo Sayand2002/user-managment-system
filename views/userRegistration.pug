@@ -4,39 +4,39 @@ include header
         form(method="post"  enctype="multipart/form-data" onsubmit="return validateUserRegistration()")
             div.container.mt-5.main-div.px-4
                 div.mb-4.text-center
-                    h1.text-white.mt-3.heading_style SIGN UP
+                    h1.mt-3.heading_style SIGN UP
                 div.mb-3.userSignupMessageDiv
                     p.text-center  #{successMessage}
                 div.mb-3.username
                     div.username-fname
-                        label(for="exampleInputFname").px-2.form-label.text-white Firstname
+                        label(for="exampleInputFname").px-2.form-label Firstname
                         input(type="text" aria-describedby="emailHelp" name="firstname").inputStyle.form-control#exampleInputFname
-                        div#fnameError.text-white.px-2 Enter firstname
+                        div#fnameError.px-2 Enter firstname
                     div.username-lname
-                        label(for="exampleInputLname").px-2.form-label.text-white Lastname
+                        label(for="exampleInputLname").px-2.form-label Lastname
                         input(type="text" aria-describedby="emailHelp" name="lastname").inputStyle.form-control#exampleInputLname 
-                        div#lnameError.text-white.px-2 Enter lastname
+                        div#lnameError.px-2 Enter lastname
 
                 div.mb-3
-                    label(for="exampleInputEmail").px-2.form-label.text-white Email address
+                    label(for="exampleInputEmail").px-2.form-label Email address
                     input(type="email" aria-describedby="emailHelp" name="email").inputStyle.form-control#exampleInputEmail
-                    div#emailError.text-white.px-2 We'll never share your email with anyone else.
+                    div#emailError.px-2 We'll never share your email with anyone else.
                 
                 div.mb-3
-                    label(for="exampleInputPhone").px-2.form-label.text-white Phone No
+                    label(for="exampleInputPhone").px-2.form-label Phone No
                     input(type="text" aria-describedby="emailHelp" name="phone_no").inputStyle.form-control#exampleInputPhone 
-                    div#phoneError.text-white.px-2 We'll never share your phone no with anyone else.
+                    div#phoneError.px-2 We'll never share your phone no with anyone else.
 
                 div.mb-3
-                    label(for="exampleInputPassword" ).px-2.form-label.text-white Password
+                    label(for="exampleInputPassword" ).px-2.form-label Password
                     input(type="password" name="password").form-control.inputStyle#exampleInputPassword
-                    div#passwordError.text-white.px-2 We'll never share your phone no with anyone else.
+                    div#passwordError.px-2 We'll never share your phone no with anyone else.
 
 
                 div.mb-3
-                    label(for="exampleInputImage" ).px-2.form-label.text-white Profile
+                    label(for="exampleInputImage" ).px-2.form-label Profile
                     input(type="file" name="image").form-control.inputStyle#exampleInputImage
-                    div#emailHelp.text-white.px-2
+                    div#emailHelp.px-2
                 button(type="submit").btn.btn-primary.mb-4 Submit
 
     script(src="/script/script.js")

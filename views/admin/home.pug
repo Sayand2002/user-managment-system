@@ -1,13 +1,12 @@
 include ../header 
     nav.navbar.container-fluid.navbar-home.px-3.display-flex
-        h3.navbar-brand.text-white Admin
-        a(href="/admin/dashboard").px-5.text-decoration-none.text-white.login-home-viewUser VIEW USERS 
-        a.nav-link.active(aria-current="page" href="/admin/new-user").flex-grow-1.text-white.login-home-viewUser ADD USER
-
-
-        form(action='/admin/logout' method='GET')
-            button.btn.btn-danger.mt-2(type="submit") LOGOUT
+        h3.navbar-brand.px-5 Admin
+        div.login-home-viewUser-parent.w-25
+            a(href="/admin/dashboard").text-decoration-none.login-home-viewUser VIEW USERS 
+            a.nav-link.active(aria-current="page" href="/admin/new-user").login-home-viewUser ADD USER
+            form(action='/admin/logout' method='GET')
+                button.btn.btn-danger.mt-2(type="submit") LOGOUT
 
     div.home-div
-        h1.text-white.w-75.mt-5 Welcome, #{message}
+        h1.px-5.w-75.mt-5 Welcome, #{message}
 
